@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 namespace Library_Management_System
 {
 
-
-
     public class LibraryMember
     {
         public string MemberName { get; set; }
@@ -17,8 +15,13 @@ namespace Library_Management_System
         {
             Console.WriteLine($"Member: {MemberName}");
         }
-    }
 
+        public virtual void AddMember(LibraryMember member)
+        {
+            // Implementation to add a member
+            Console.WriteLine($"Member {member.MemberName} added.");
+        }
+    }
 
 
 }

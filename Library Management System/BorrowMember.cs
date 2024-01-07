@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System
 {
-
-    // BorrowMember class
     public class BorrowMember : LibraryMember
     {
         public void BorrowItem(BookState item, IBorrowable service)
@@ -26,6 +24,12 @@ namespace Library_Management_System
         {
             base.DisplayMemberInfo();
             Console.WriteLine("Borrow Member");
+        }
+
+        public override void AddMember(LibraryMember member)
+        {
+            // Additional logic for adding a member in BorrowMember
+            Console.WriteLine($"Borrow Member {member.MemberName} added.");
         }
     }
 

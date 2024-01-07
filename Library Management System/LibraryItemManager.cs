@@ -6,26 +6,18 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System
 {
-
-    public class Library
+    public class LibraryItemManager
     {
         private List<BookState> items;
-        private List<LibraryMember> members;
 
-        public Library()
+        public LibraryItemManager()
         {
             items = new List<BookState>();
-            members = new List<LibraryMember>();
         }
 
         public void AddItem(BookState item)
         {
             items.Add(item);
-        }
-
-        public void AddMember(LibraryMember member)
-        {
-            members.Add(member);
         }
 
         public void DisplayItems()
@@ -36,7 +28,6 @@ namespace Library_Management_System
             }
         }
 
-        // Assuming you have a method to get a book state by title
         public BookState GetItem(string title)
         {
             return items.Find(item => item.Title == title);

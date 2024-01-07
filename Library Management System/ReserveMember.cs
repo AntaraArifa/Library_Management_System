@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace Library_Management_System
 {
 
-    // ReserveMember class
     public class ReserveMember : LibraryMember
     {
         public void ReserveItem(BookState item, IReservable service)
@@ -26,6 +25,12 @@ namespace Library_Management_System
         {
             base.DisplayMemberInfo();
             Console.WriteLine("Reserve Member");
+        }
+
+        public override void AddMember(LibraryMember member)
+        {
+            // Additional logic for adding a member in ReserveMember
+            Console.WriteLine($"Reserve Member {member.MemberName} added.");
         }
     }
 
