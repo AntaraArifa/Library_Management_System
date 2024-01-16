@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System
 {
-    
+
     public class ReservingService : IReservable
     {
         private bool isReserved;
@@ -25,14 +25,21 @@ namespace Library_Management_System
             }
             else
             {
-                Console.WriteLine("Item cannot be reserved.");
+                Console.WriteLine("Item is already reserved.");
             }
         }
 
         public void CancelReservation()
         {
-            isReserved = false;
-            Console.WriteLine("Reservation canceled.");
+            if (isReserved)
+            {
+                isReserved = false;
+                Console.WriteLine("Reservation canceled.");
+            }
+            else
+            {
+                Console.WriteLine("Item is not currently reserved.");
+            }
         }
     }
 

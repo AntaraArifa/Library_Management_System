@@ -32,9 +32,17 @@ namespace Library_Management_System
 
         public void CancelReservation()
         {
-            bookState.IsReserved = false;
-            Console.WriteLine("Reservation canceled.");
+            if (IsReserved)
+            {
+                bookState.IsReserved = false;
+                Console.WriteLine("Reservation canceled.");
+            }
+            else
+            {
+                throw new InvalidOperationException("Item is not currently reserved.");
+            }
         }
     }
+
 
 }

@@ -14,10 +14,18 @@ namespace Library_Management_System
             Console.WriteLine($"{MemberName} borrowed {item.Display()}");
         }
 
-        public void ReturnItem(IBorrowable service)
+        public void ReturnItem(BookState item, IBorrowable service)
         {
-            service.ReturnItem();
-            Console.WriteLine($"{MemberName} returned {((IDisplayable)service).Display()}");
+            try
+            {
+                service.ReturnItem();
+                Console.WriteLine($"{MemberName} returned {item.Display()}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during return: {ex.Message}");
+                // You can handle the exception as per your requirements
+            }
         }
 
         public override void DisplayMemberInfo()

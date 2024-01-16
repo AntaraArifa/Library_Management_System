@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System
 {
-    
+
     public class BorrowingService : IBorrowable
     {
         private bool isBorrowed;
@@ -31,9 +31,16 @@ namespace Library_Management_System
 
         public void ReturnItem()
         {
-            isBorrowed = false;
-            Console.WriteLine("Item returned successfully.");
+            if (isBorrowed)
+            {
+                isBorrowed = false;
+                Console.WriteLine("Item returned successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Item is not currently borrowed.");
+            }
         }
-    }
 
+    }
 }

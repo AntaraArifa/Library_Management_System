@@ -11,14 +11,30 @@ namespace Library_Management_System
     {
         public void ReserveItem(BookState item, IReservable service)
         {
-            service.ReserveItem(); // Use the ReservingService
-            Console.WriteLine($"{MemberName} reserved {item.Display()}");
+            try
+            {
+                service.ReserveItem(); // Use the ReservingService
+                Console.WriteLine($"{MemberName} reserved {item.Display()}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during reservation: {ex.Message}");
+                // You can handle the exception as per your requirements
+            }
         }
 
-        public void CancelReservation(IReservable service)
+        public void CancelReservation(BookState item, IReservable service)
         {
-            service.CancelReservation();
-            Console.WriteLine($"{MemberName}'s reservation for {((IDisplayable)service).Display()} canceled");
+            try
+            {
+                service.CancelReservation();
+                Console.WriteLine($"{MemberName}'s reservation for {item.Display()} ");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during reservation cancellation: {ex.Message}");
+                // You can handle the exception as per your requirements
+            }
         }
 
         public override void DisplayMemberInfo()

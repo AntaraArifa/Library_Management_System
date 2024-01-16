@@ -32,9 +32,17 @@ namespace Library_Management_System
 
         public void ReturnItem()
         {
-            bookState.IsBorrowed = false;
-            Console.WriteLine("Item returned successfully.");
+            if (IsBorrowed)
+            {
+                bookState.IsBorrowed = false;
+                Console.WriteLine("Item returned successfully.");
+            }
+            else
+            {
+                throw new InvalidOperationException("Item is not currently borrowed.");
+            }
         }
     }
+
 
 }

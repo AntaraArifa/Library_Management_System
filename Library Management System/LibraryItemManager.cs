@@ -24,9 +24,13 @@ namespace Library_Management_System
         {
             foreach (BookState item in items)
             {
-                Console.WriteLine(item.Display());
+                string borrowingStatus = item.IsBorrowed ? "Borrowed" : "Available";
+                string reservationStatus = item.IsReserved ? "Reserved" : "Not Reserved";
+
+                Console.WriteLine($"Title: {item.Title}, Author: {item.Author}, Borrowing Status: {borrowingStatus}, Reservation Status: {reservationStatus}");
             }
         }
+
 
         public BookState GetItem(string title)
         {

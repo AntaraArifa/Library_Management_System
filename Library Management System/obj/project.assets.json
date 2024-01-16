@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\OneDrive\\Desktop\\Library Management System\\Library Management System\\Library Management System.csproj",
+      "projectUniqueName": "E:\\OneDrive\\Desktop\\Library Management System\\Library Management System\\Library Management System.csproj",
       "projectName": "Library Management System",
-      "projectPath": "C:\\Users\\USER\\OneDrive\\Desktop\\Library Management System\\Library Management System\\Library Management System.csproj",
+      "projectPath": "E:\\OneDrive\\Desktop\\Library Management System\\Library Management System\\Library Management System.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\OneDrive\\Desktop\\Library Management System\\Library Management System\\obj\\",
+      "outputPath": "E:\\OneDrive\\Desktop\\Library Management System\\Library Management System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
