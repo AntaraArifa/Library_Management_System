@@ -13,13 +13,13 @@ namespace Library_Management_System
         {
             try
             {
-                service.ReserveItem(); // Use the ReservingService
+                service.ReserveItem(); 
                 Console.WriteLine($"{MemberName} reserved {item.Display()}");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error during reservation: {ex.Message}");
-                // You can handle the exception as per your requirements
+                
             }
         }
 
@@ -33,19 +33,13 @@ namespace Library_Management_System
             catch (Exception ex)
             {
                 Console.WriteLine($"Error during reservation cancellation: {ex.Message}");
-                // You can handle the exception as per your requirements
+                
             }
-        }
-
-        public override void DisplayMemberInfo()
-        {
-            base.DisplayMemberInfo();
-            Console.WriteLine("Reserve Member");
         }
 
         public override void AddMember(LibraryMember member)
         {
-            // Additional logic for adding a member in ReserveMember
+            
             Console.WriteLine($"Reserve Member {member.MemberName} added.");
         }
     }

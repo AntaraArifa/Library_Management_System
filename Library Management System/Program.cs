@@ -6,7 +6,7 @@ class Program
     {
         LibraryItemManager library = new LibraryItemManager();
 
-        // Adding 8 different books to the library
+        
         List<BookState> bookStates = new List<BookState>
         {
             new BookState { Title = "The Great Gatsby", Author = "F. Scott Fitzgerald" },
@@ -29,7 +29,7 @@ class Program
 
         Console.WriteLine("\n========================================================================================================================\n");
 
-        // Adding 4 members to the library
+        
         List<LibraryMember> members = new List<LibraryMember>
         {
             new BorrowMember { MemberName = "Farhan" },
@@ -46,29 +46,29 @@ class Program
         Console.WriteLine("\n========================================================================================================================\n");
 
 
-        // Borrow Members borrow books
+        
         ((BorrowMember)members[0]).BorrowItem(library.GetItem("The Great Gatsby"), new BorrowBook(library.GetItem("The Great Gatsby")));
         ((BorrowMember)members[1]).BorrowItem(library.GetItem("To Kill a Mockingbird"), new BorrowBook(library.GetItem("To Kill a Mockingbird")));
 
         Console.WriteLine("\n========================================================================================================================\n");
 
-        // Reserve Members reserve books
+        
         ((ReserveMember)members[2]).ReserveItem(library.GetItem("1984"), new ReserveBook(library.GetItem("1984")));
         ((ReserveMember)members[3]).ReserveItem(library.GetItem("The Catcher in the Rye"), new ReserveBook(library.GetItem("The Catcher in the Rye")));
 
         Console.WriteLine("\n========================================================================================================================\n");
 
-        // Borrow Member returns a book
+        
         ((BorrowMember)members[0]).ReturnItem(library.GetItem("The Great Gatsby"), new BorrowBook(library.GetItem("The Great Gatsby")));
 
         Console.WriteLine("\n========================================================================================================================\n");
 
-        // Reserve Member cancels a reservation
+        
         ((ReserveMember)members[2]).CancelReservation(library.GetItem("1984"), new ReserveBook(library.GetItem("1984")));
 
         Console.WriteLine("\n========================================================================================================================\n");
 
-        // Displaying updated library status
+        
         Console.WriteLine("Updated Library Items:");
         library.DisplayItems();
     }
