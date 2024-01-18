@@ -15,8 +15,7 @@ class Program
             new BookState { Title = "The Catcher in the Rye", Author = "J.D. Salinger" },
             new BookState { Title = "Pride and Prejudice", Author = "Jane Austen" },
             new BookState { Title = "The Hobbit", Author = "J.R.R. Tolkien" },
-            new BookState { Title = "The Da Vinci Code", Author = "Dan Brown" },
-            new BookState { Title = "The Alchemist", Author = "Paulo Coelho" }
+            
         };
 
         foreach (BookState bookState in bookStates)
