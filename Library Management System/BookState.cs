@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System
 {
-    public class BookState : IDisplayable
+    public class BookState 
     {
         public string Title { get; set; }
         public string Author { get; set; }

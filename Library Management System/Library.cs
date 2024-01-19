@@ -9,32 +9,20 @@ namespace Library_Management_System
 
     public class Library
     {
-        private List<BookState> items;
         private List<LibraryMember> members;
 
         public Library()
         {
-            items = new List<BookState>();
+            
             members = new List<LibraryMember>();
         }
 
-        public void AddItem(BookState item)
-        {
-            items.Add(item);
-        }
-
+       
         public void AddMember(LibraryMember member)
         {
             members.Add(member);
         }
 
-        public void DisplayItems()
-        {
-            foreach (BookState item in items)
-            {
-                Console.WriteLine(item.Display());
-            }
-        }
     }
 
 
